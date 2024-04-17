@@ -10,9 +10,14 @@
         pigIt('Hello world !');     // elloHay orldway !
 */
 
-export const pigIt = (a: string): string => {
-  return a
+export const pigIt = (str: string): string => {
+  return str
     .split(" ")
-    .map((e: string) => e.substring(1) + e[0] + "ay")
+    .map((word) => {
+      if (/^[a-zA-Z]+$/.test(word)) {
+        return word.substring(1) + word[0] + "ay";
+      }
+      return word;
+    })
     .join(" ");
 };
