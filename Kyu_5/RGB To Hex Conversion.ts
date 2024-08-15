@@ -14,7 +14,6 @@
         0, 0, 0       --> "000000"
         148, 0, 211   --> "9400D3"
 
-
 */
 
 export function rgb(r: number, g: number, b: number): string {
